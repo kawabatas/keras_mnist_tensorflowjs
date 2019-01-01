@@ -19,3 +19,16 @@ keras.py をコピーし、RUN する
 
 model_mnist_cnn.h5 をダウンロード
 
+## 学習モデルを TensorFlowJs に変換
+```
+pip install tensorflowjs
+tensorflowjs_converter --input_format keras \
+                       model_mnist_cnn.h5 \
+                       model_mnist_cnn.json
+```
+
+## ブラウザで手書き文字を分類
+ローカルで起動
+```
+python -m SimpleHTTPServer 8888
+```
