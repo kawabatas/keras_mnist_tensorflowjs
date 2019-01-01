@@ -24,11 +24,20 @@ model_mnist_cnn.h5 をダウンロード
 pip install tensorflowjs
 tensorflowjs_converter --input_format keras \
                        model_mnist_cnn.h5 \
-                       model_mnist_cnn.json
+                       public/model
 ```
 
 ## ブラウザで手書き文字を分類
 ローカルで起動
 ```
+cd public
 python -m SimpleHTTPServer 8888
 ```
+
+### Firebase
+[Firebase](https://firebase.google.com/docs/web/setup?hl=ja)
+
+firebase serve
+
+firebase deploy --only hosting
+
